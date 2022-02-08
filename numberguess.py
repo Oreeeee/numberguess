@@ -7,8 +7,6 @@ attempts_left = usable_attempts
 
 print("Rules: You have to guess a random number between 1 and 10, and you have 3 chances. This program will tell you is this a bigger or smaller number.")
 
-print(hidden_number)
-
 while failed_attempts < usable_attempts:
     user_input = int(input("Number: "))
     failed_attempts = failed_attempts + 1
