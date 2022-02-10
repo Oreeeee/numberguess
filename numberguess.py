@@ -10,7 +10,12 @@ def main():
     print("Rules: You have to guess a random number between 1 and 10, and you have 3 chances. This program will tell you is this a bigger or smaller number.")
 
     while failed_attempts < usable_attempts:
-        user_input = int(input("Number: "))
+        while True:
+            try:
+                user_input = int(input("Number: "))
+                break
+            except ValueError:
+                print("You have to enter a number!")
         failed_attempts = failed_attempts + 1
         if user_input == hidden_number:
             print(f"Congratulations, you won! You had {attempts_left} attempt(s) left.")
