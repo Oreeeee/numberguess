@@ -13,7 +13,10 @@ def main():
         while True:
             try:
                 user_input = int(input("Number: "))
-                break
+                if user_input > 10 or user_input < 1:
+                    print("You have to enter a number between 1 and 10")
+                else:
+                    break
             except ValueError:
                 print("You have to enter a number!")
         failed_attempts = failed_attempts + 1
